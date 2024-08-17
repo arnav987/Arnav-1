@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Timeless Touches</title>
+    
+    <link rel="stylesheet" href="1.css">
+    <style>body {
+        width:100% ;
+    }
+    #header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 80px;
+        background: #000000;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+    #navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #navbar li{
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+        
+    }
+    
+    #navbar li a{
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: #FFD700;
+        transition: 0.3 ease;
+    
+    }
+    #navbar li a:hover{
+    
+        color: #ffffff;
+    }
+    #navbar li a.active::after,
+    #navbar li a:hover::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #808080;
+        position: relative;
+        bottom: -4px;
+        left: 20px;
+    }
+    
+    
+    .f{
+        font-family: 'Glirock', sans-serif;
+        margin: 9px;
+        padding: 1px;
+        font-size: 30px;
+        color: #f5c518; 
+        background-color: #000; 
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        
+    }
+    
+    .i{
+        transition: opacity 0.5s ease-in-out;
+    }
+    .i:hover{
+        opacity: 0.5;
+        
+    }
+    
+    
+    
+    
+    .g{
+        background-color: #000; 
+        color: #FFD700;
+        border: 2px solid #FFD700; 
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    .g:hover{
+        color: #000; 
+        background-color: #FFD700; 
+    }
+    .g::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.5), transparent);
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        z-index: 1;
+    }
+    .g:hover::before{
+        opacity: 1;
+    }
+    
+    .g{
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5)
+    }
+    
+    
+    
+    
+    #html{
+        background-image: url(_4801d5b4-9b53-438c-9015-28362112015d.jpeg);
+        height: 90vh;
+        width: 1310px;
+        background-size: cover;
+        background-position:top 25% right 0 ;
+        padding: 0 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 2px;
+    }
+    
+    .fade-in{
+        opacity: 1;
+    }
+    .fade-out{
+        opacity: 0;
+    }
+    
+    
+    
+    
+    
+    #exclusive{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap ;
+    }
+    
+    .section-p1{
+        padding: 40px 80px;
+    }
+    .section-m1{
+        margin: 40px 0;
+    }
+    
+    #exclusive .box{
+        height: 140px;
+        width: 180px;
+        text-align: center;
+        padding: 25px 15px;
+        box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+        border: 1px solid #53c2a0;
+        border-radius: 4px;
+        margin: 15px;
+    }
+    #exclusive .box:hover{
+        box-shadow: 10px 10px 54px rgba( 70, 62, 221, 0.1);
+    }
+    #exclusive .box h6{
+        display: inline-block;
+        padding: 9px 8px 6px 8px;
+        line-height: 1;
+        border-radius: 4px;
+        color: #FFD700;
+        background-color: #000;
+        font-size: 12px;
+    }
+    #product{
+        text-align: center;
+    }
+    #product .pro-1{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        
+    }
+    #product .pro{
+        width: 23%;
+        min-width: 250px;
+        padding: 10px 12px;
+        border: 1px solid #000;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+        margin: 15px 0;
+        transition: 0.2s ease;
+        position: relative;
+    }
+    #product .pro:hover{
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);;
+    }
+
+    #product .pro img{
+        width: 100%;
+        height: 50%;
+        border-radius: 20px;
+    }
+    #product .pro .des{
+        text-align: start;
+        padding: 10px 0;
+    }
+    
+    #product .pro .des span{
+        color: #606063;
+        font-size: 12px;
+
+    }
+    #product .pro .des h5{
+        padding-top: 7px;
+        color: #1a1a1a;
+        font-size: 14px;
+    }
+    #product .pro .des i{
+        font-size: 12px;
+        color: rgb(243, 181, 25);
+
+    }
+    #product .pro .des h4{
+        padding-top: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #088178;
+    }
+    #product .pro .icon {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50px;
+        background-color: #e8f6ea;
+        font-weight: 500;
+        color: #088178;
+        border: 1px solid #cce7d0;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+    .about-us {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-us {
+    padding: 60px 0;
+    background: #000; /* Black background */
+    color: gold; /* Gold text color */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h1 {
+    text-align: center;
+    color: gold; /* Gold color for heading */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.text-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.text-content h2 {
+    color: gold; /* Gold color for subheadings */
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.text-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.text-content ul {
+    list-style: disc;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.text-content ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #000; /* Black background for the footer */
+    color: gold; /* Gold text color */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-about h2,
+.footer-links h2,
+.footer-contact h2,
+.footer-social h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: gold;
+}
+
+.footer-about p,
+.footer-contact p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: gold;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    background-color: #111; /* Slightly darker background for the bottom section */
+    padding: 10px 0;
+    margin-top: 20px;
+    color: gold;
+    font-size: 0.9em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+
+    
+    
+    </style>
+</head>     
+<body>
+    <section id="header">
+    <a href="{%static '/2.html'%}"><img src="{%static '/68f4e8d448f33a527b4a0c4e5a0144c2.jpg'%}" alt="" class="logo" height="50 px"></a>
+
+    <div>
+        <ul id="navbar">
+            <li><a class="active" href="">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About US</a></li>
+            <li><a href="#"><i class="fas fa-shopping-bag icon"></i></a></li>
+        </ul>
+    </div>
+    </section>
+
+
+    <section id="html" >
+    <h1 class="f i ">Have Your Own Style <br><br><section></section> Differnet From Others</h1><br><br>
+    <button class=" g" >Order</button>
+    </section>
+
+    <section id="exclusive" class="section-p1">
+        <div class="box">
+            <img src="{% static '/free shipping1.jpeg'%}" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+
+        <div class="box">
+            <img src="{% static '/online.png'%}" alt="">
+            <h6>Order Online</h6>
+        </div>
+
+        <div class="box">
+            <img src="{%static '/f4.png'%}" alt="">
+            <h6>Promotions</h6>
+        </div>
+
+        <div class="box">
+            <img src="{% static '/f6.png'%}" alt="">
+            <h6>24/7 Support</h6>
+        </div>
+        
+    </section>
+
+    <section id="product" class="section-p1">
+        <h1>Featured products</h1>
+        <p>Ambient touches New Modern Design</p>
+        <div class="pro-1">
+            <div class="pro">
+                <img src="{%static '/Heeab7d1ff2ad4291b87ee431d51825eeA.jpg'%}" alt="Original Image" class="image" height="50px" width="60px">
+                <div class="des">
+                    <span>Timeless Touches</span>
+                    <h5>firework Crystal lamp</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$215</h4>
+                </div>
+                <a href="{% static '/golden messy lamp.html'%}"><i class="fas fa-shopping-cart icon" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="{%static '/H7b76acef116c4797a9b0cca99e9cf062Q.webp'%}" alt="Original Image" class="image" height="50px" width="60px">
+                <div class="des">
+                    <span>Timeless Touches</span>
+                    <h5>butterfly chandlier</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$349</h4>
+                </div>
+                <a href="{% static '/butterfly chandlier.html'%}"><i class="fas fa-shopping-cart icon" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="{%static '/Hc13feffb5c614af98d5afd99456a12f3V.webp'%}" alt="Original Image" class="image" height="50px" width="60px">
+                <div class="des">
+                    <span>Timeless Touches</span>
+                    <h5>Dinner Table chandlier</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$299</h4>
+                </div>
+                <a href="{%static '/Dinner Table Chandlier.html'%}"><i class="fas fa-shopping-cart icon" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="{% static '/Hf3fd5452bc734b56ada3ebfd85405d81W.webp'%}" alt="Original Image" class="image" height="50px" width="60px">
+                <div class="des">
+                    <span>Timeless Touches</span>
+                    <h5>Crystal Lamp</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$399</h4>
+                </div>
+                <a href="{%static '/Crystal Lamp.html'%}"><i class="fas fa-shopping-cart icon" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="{% static '/HTB1.hIGOSzqK1RjSZFpq6ykSXXaH.jpg'%}"Original Image" class="image" height="50px" width="60px">
+                <div class="des">
+                    <span>Timeless Touches</span>
+                    <h5>Feather piece</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$289</h4>
+                </div>
+                <a href="{%static '/Feather Piece.html'%}"><i class="fas fa-shopping-cart icon" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="{%static '/download-2023-07-31T115936.429.webp'%}" alt="Original Image" class="image" height="50px" width="60px">
+                <div class="des">
+                    <span>Timeless Touches</span>
+                    <h5>Lighting Feather</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$129</h4>
+                </div>
+                <a href="{%static '/Lightning Feather.html'%}"><i class="fas fa-shopping-cart icon" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="{%static '/H7e21acfe748e4dacad221e47771ec249K.webp'%}" alt="Original Image" class="image" height="50px" width="60px">
+                <div class="des">
+                    <span>Timeless Touches</span>
+                    <h5>Wall Piece</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$439</h4>
+                </div>
+                <a href="{% static '/Wall piece.html'%}"><i class="fas fa-shopping-cart icon" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="{%static '/H90a232ba75c54bafb1b92a2203e11d6aa.webp'%}" alt="Original Image" class="image" height="50px" width="60px">
+                <div class="des">
+                    <span>Timeless Touches</span>
+                    <h5>Rainbow Crystal</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$999</h4>
+                </div>
+                <a href="{%static '/Rainbow Crystal.html'%}"><i class="fas fa-shopping-cart icon" ></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about-us">
+        <div class="container">
+            <h1>About Us</h1>
+            <div class="about-content">
+                <img src="{%static '/AdobeStock_108067216.webp'%}" alt="Our Team" class="team-photo">
+                <div class="text-content">
+                    <h2>Our Story</h2>
+                    <p>Welcome to [Timeless Touches], where we transform spaces into homes. Founded in [Year], our mission is to bring elegance and comfort into every room through our carefully curated home decor collection.</p>
+                    <p>Our team is passionate about design and committed to offering unique pieces that resonate with your personal style. From luxurious furniture to exquisite accessories, we strive to provide exceptional quality and service.</p>
+                    <h2>Our Values</h2>
+                    <ul>
+                        <li>**Quality**: We source the finest materials and craftsmanship for our products.</li>
+                        <li>**Innovation**: We stay ahead of trends to offer contemporary designs.</li>
+                        <li>**Customer Satisfaction**: Your happiness is our priority, and we aim to exceed your expectations.</li>
+                    </ul>
+                    <p>Thank you for choosing [Timeless Touches]. We look forward to helping you create a space you love.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2>About Us</h2>
+                <p>At [Timeless Touches], we transform spaces into homes with our curated selection of luxurious home decor. Our mission is to provide quality, style, and elegance to every room.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#exclusive">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#product">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p>Email: <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: 1234 Home Decor Lane, City, Country</p>
+            </div>
+            
+            <div class="footer-social">
+                <h2>Follow Us</h2>
+                <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon"><img src="th (2).jpeg" alt="Facebook"></a>
+                <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon"><img src="th (3).jpeg" alt="Instagram"></a>
+                <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon"><img src="th (4).jpeg" alt="Twitter"></a>
+                <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon"><img src="th (5).jpeg" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 [Your Company Name]. All rights reserved.</p>
+        </div>
+    </footer>
+    </section>
+</body>
+</html>
